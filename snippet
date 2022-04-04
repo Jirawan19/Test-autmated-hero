@@ -1,0 +1,50 @@
+{
+	"template cypress": {
+		"scope": "javascript,typescript",
+		"prefix": "templateCypress",
+		"body": [
+			"\/\/\/ <reference types=\"cypress\" \/>\r\n\r\ncontext(\"$1\", () => {\r\n    it(\"$2\", () => {\r\n        $3\r\n    })\r\n})"
+		],
+		"description": "generate template cypress"
+	},
+	"generate function": {
+		"scope": "javascript,typescript",
+		"prefix": "genFunction",
+		"body": [
+			"const $1 = () => {\r\n    $2\r\n}"
+		],
+		"description": "generate template function"
+	},
+	"it": {
+		"scope": "javascript,typescript",
+		"prefix": "it function",
+		"body": [
+			"    it(\"$1\", () => {\r\n        $2\r\n    })"
+		],
+		"description": "it function"
+	},
+	"click type": {
+		"scope": "javascript,typescript",
+		"prefix": "click,type function",
+		"body": [
+			"click().type(\"$1\")"
+		],
+		"description": "click,type"
+	},
+	"select": {
+		"scope": "javascript,typescript",
+		"prefix": "select function",
+		"body": [
+			"click().type(\"$1\").type(\"{downarrow}{downarrow}{enter}\")"
+		],
+		"description": "select"
+	},
+	"contains": {
+		"scope": "javascript,typescript",
+		"prefix": "contains function",
+		"body": [
+			"contains(\"$1\")"
+		],
+		"description": "contains"
+	}
+}
