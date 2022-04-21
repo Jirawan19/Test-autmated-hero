@@ -5,7 +5,7 @@ context("Warehouse", () => {
     cy.visit("https://herodemo.autopair.co/");
   });
   it("Mag", () => {
-    cy.login("007", "1234");
+    cy.login("test ส่วนลด", "1234");
     Mag();
     Mag1();
     Mag2();
@@ -33,7 +33,7 @@ const Mag1 = () => {
   cy.get("#itemoffsetMag").type("500");
   cy.get("#itemcolorMag").type("white");
   cy.get("#model_mag").type("50");
-  cy.get("#skuMag").type("677");
+  cy.get("#skuMag").type("699997");
   cy.get("#widthMag").click().type("45");
   cy.get("#rimMag").click().type("10");
 

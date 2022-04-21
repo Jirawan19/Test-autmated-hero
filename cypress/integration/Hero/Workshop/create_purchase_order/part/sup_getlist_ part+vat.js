@@ -3,7 +3,7 @@
 context("supplier getLish part+vat", () => {
     it("purchase_order_part", () => {
         // cy.pause()
-        cy.login("007", "1234");
+        cy.login("test ส่วนลด", "1234");
         purchase_order()
         cy.logOut()
     })

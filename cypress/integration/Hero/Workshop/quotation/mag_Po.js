@@ -3,18 +3,18 @@
 context("mag_po", () => {
     it("quotation mag", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         // add_mag()
         quotation()
     })
     it("start_job", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job()
     })
     it("start_job1", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job1()
         check_job()
     })
@@ -61,7 +61,7 @@ const quotation = () => {
     cy.get('.col-xl-3 > .btn').click({ force: true })
     cy.get('#tab-MAG').click({ force: true })
     cy.get('#pane-MAG > .d-xl-block > .table > tbody > :nth-child(1) > .text-left').should("contain.text", "เพิ่มแม็ก")
-    cy.get('#addMagPo-13047').click({ force: true })
+    cy.get('#addMagPo-13023').click({ force: true })
     cy.get('#Product > .modal-dialog > .modal-content > .modal-header > .close').click()
 
     //เช็คสินค้า
@@ -126,7 +126,7 @@ const check = () => {
 }
 const start_job = () => {
     cy.wait(1000)
-    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/88")
+    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/32")
     cy.wait(1000)
 
     // สถานะรอลูกค้ายืนยัน
@@ -162,7 +162,7 @@ const start_job = () => {
 }
 const start_job1 = () => {
     cy.wait(1000);
-    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00294-0322-0046")
+    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00290-0422-0006")
     cy.wait(1000);
 
     // สถานะรอซ่อมบำรุง

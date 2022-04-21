@@ -5,7 +5,7 @@ context("Warehouse", () => {
     cy.visit("https://herodemo.autopair.co/");
   });
   it("Car tiees", () => {
-    cy.login("007", "1234");
+    cy.login("test ส่วนลด", "1234");
     Cartiees();
     Cartiees1();
     confimeCartiees();

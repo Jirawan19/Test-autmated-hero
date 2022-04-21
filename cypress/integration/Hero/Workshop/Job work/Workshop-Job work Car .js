@@ -5,7 +5,7 @@
 context("Workshop Add Repair work", () => {
   // เปิดงานซ่อม
   it("Add job work", () => {
-    cy.login("007", "1234");
+    cy.login("test ส่วนลด", "1234");
     // AddCustomerJob();
     // AddTechincianOrWorkjob();
     // addCartiees();
@@ -15,19 +15,19 @@ context("Workshop Add Repair work", () => {
   });
 
   //   ซ่อมบำรุง นำเลขออเดอร์ที่พึ่งเปิดงานซ่อมมาใส่ทุกครั้ง
-  // it("job work", () => {
-  //   cy.login("empGrip01", "password");
-  //   cy.wait(2000);
-  //   jobwork();
-  //   cy.wait(2000);
-  //   checkStatus();
-  //   checkStatus1();
-  // });
+  it("job work", () => {
+    cy.login("empGrip01", "password");
+    cy.wait(2000);
+    jobwork();
+    cy.wait(2000);
+    checkStatus();
+    checkStatus1();
+  });
 });
 
 const JobWork = () => {
   cy.get("#nav-item-2").click();
-  cy.get("#btn-addRepairJob");
+  cy.get("#btn-addRepairJob").click({ force: true })
   cy.contains("งานซ่อม").click({ force: true });
 
   // เลือกลูกค้าและพนักงานซ่อม
@@ -37,42 +37,42 @@ const JobWork = () => {
     .type("9กณ")
     .type("{downarrow}{enter}");
 
-  cy.get("#selSelectmechanicId")
-    .click({ force: true })
-    .type("ช่างซ่อม",{ force: true })
-    .type("{downarrow}{enter}");
+  // cy.get("#selSelectmechanicId")
+  //   .click({ force: true })
+  //   .type("ช่างซ่อม",{ force: true })
+  //   .type("{downarrow}{enter}");
 
-  cy.get("#selSelectSales")
-    .click({ force: true })
-    .type("พนักงาน",{ force: true })
-    .type("{downarrow}{enter}");
+  // cy.get("#selSelectSales")
+  //   .click({ force: true })
+  //   .type("พนักงาน",{ force: true })
+  //   .type("{downarrow}{enter}");
 
-  cy.get("#btnAddProduct").click({ force: true });
+  cy.get('.col-xl-3 > .btn').click({ force: true });
 
   // ค้นหาสินค้า
   cy.wait(4000);
 
-  cy.get("#txtSelectWidth")
-    .click({ force: true })
-    .wait(1000)
-    .type("185")
-    .type("{downarrow}{enter}");
+  // cy.get("#txtSelectWidth")
+  //   .click({ force: true })
+  //   .wait(1000)
+  //   .type("185")
+  //   .type("{downarrow}{enter}");
 
-  cy.wait(2000);
+  // cy.wait(2000);
 
-  cy.get("#txtSelectSeries")
-    .click({ force: true })
-    .wait(1000)
-    .type("16")
-    .type("{downarrow}{enter}");
+  // cy.get("#txtSelectSeries")
+  //   .click({ force: true })
+  //   .wait(1000)
+  //   .type("16")
+  //   .type("{downarrow}{enter}");
 
-  cy.get("#btnSearchTire").click({ force: true });
+  // cy.get("#btnSearchTire").click({ force: true });
 
   // ค้นหาสินค้า
   cy.get("#trTireCatalog0 > .text-left").contains("เพิ่มยาง");
 
   // เลือกสินค้า
-  cy.get("#dotM-10604").click();
+  cy.get('#dotM-13021').click();
   cy.get(".modal-body > .table > tbody > tr > :nth-child(1)").should(
     "contain.text",
     "0319"
@@ -316,7 +316,7 @@ const taxAddCustomer6 = (textNo) => {
 };
 
 const jobwork = () => {
-  cy.visit("https://herodemo.autopair.co/workshop/jobs/GRIP-01-1021-0003");
+  cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00290-0422-0003");
   cy.get(".status-border").contains("รอซ่อมบำรุง");
   cy.get("#podata-0 > :nth-child(3)").contains("เพิ่มยาง");
   cy.get("#po-0 > :nth-child(4)").contains("200.00");

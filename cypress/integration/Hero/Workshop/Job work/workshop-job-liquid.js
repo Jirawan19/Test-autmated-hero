@@ -3,7 +3,7 @@
 context("job fiuid", () => {
     it("job fiuid", () => {
         cy.pause()
-        cy.login("007", "1234")
+        cy.login("test ส่วนลด", "1234")
         // AddCustomer()
         // AddTechincian()
         // liquid()
@@ -192,7 +192,7 @@ const job = () => {
 // เริ่มซ่อมบำรุง
 const start_job = () => {
     cy.wait(5000)
-    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00289-0222-0007")
+    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00289-0222-0test ส่วนลด")
     cy.wait(5000)
 
     // สถานะรอซ่อมบำรุง

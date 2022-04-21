@@ -3,18 +3,18 @@
 context("fiuid_po", () => {
     it("quotation fiuid", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         // liquid()
         quotation()
     })
     it("start_job", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job()
     })
     it("start_job1", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job1()
         check_job()
     })
@@ -213,7 +213,7 @@ const taxManufac = (textNo) => {
 // เปิดงานซ่อมบำรุงจากใบเสนอราคา
 const start_job = () => {
     cy.wait(1000)
-    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/115")
+    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/31")
     cy.wait(1000)
 
     // สถานะรอลูกค้ายืนยัน
@@ -247,7 +247,7 @@ const start_job = () => {
 }
 const start_job1 = () => {
     cy.wait(1000);
-    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00294-0322-0062")
+    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00290-0422-0005")
     cy.wait(1000);
 
     // สถานะรอซ่อมบำรุง

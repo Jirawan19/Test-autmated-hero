@@ -3,18 +3,18 @@
 context("fiuid_po", () => {
     it("quotation fiuid", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         // liquid()
         quotation()
     })
     it("start_job", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job()
     })
     it("start_job1", () => {
         cy.pause()
-        cy.login("test2.2329436448013107", "1234");
+        cy.login("test ส่วนลด", "1234");
         start_job1()
         check_job()
     })
@@ -175,7 +175,7 @@ const quotation = () => {
     cy.get('.col-xl-3 > .btn').click({ force: true })
     cy.get('#tab-LIQUID').click()
     cy.wait(500)
-    cy.get('#addLiquidPo-13042').click()
+    cy.get('#addLiquidPo-12995').click()
     cy.get('.el-notification__closeBtn').click()
     cy.get('#Product > .modal-dialog > .modal-content > .modal-header > .close').click({ force: true })
 
@@ -197,7 +197,7 @@ const quotation = () => {
 // เปิดงานซ่อมบำรุงจากใบเสนอราคา
 const start_job = () => {
     cy.wait(1000)
-    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/107")
+    cy.visit("https://herodemo.autopair.co/workshop/quotation/info/30")
     cy.wait(1000)
 
     // สถานะรอลูกค้ายืนยัน
@@ -226,7 +226,7 @@ const start_job = () => {
 }
 const start_job1 = () => {
     cy.wait(1000);
-    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00294-0322-0059")
+    cy.visit("https://herodemo.autopair.co/workshop/jobs/ATH-00290-0422-0004")
     cy.wait(1000);
 
     // สถานะรอซ่อมบำรุง

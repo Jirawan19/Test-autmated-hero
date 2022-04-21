@@ -325,7 +325,7 @@ const taxAddCustomer6 = (textNo) => {
 
 const jobwork = () => {
   cy.get("#nav-item-2").click();
-  cy.visit("https://herodemo.autopair.co/workshop/jobs/GRIP-01-0921-0070");
+  cy.visit("https://herodemo.autopair.co/workshop/jobs/GRIP-01-0921-test ส่วนลด0");
   cy.get(".status-border").contains("รอซ่อมบำรุง");
   cy.get("#podata-0 > :nth-child(3)").contains("เพิ่มยาง");
   cy.get("#po-0 > :nth-child(4)").contains("5,000.00");

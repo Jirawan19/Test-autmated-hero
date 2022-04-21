@@ -2,7 +2,7 @@
 
 context("Warehouse", () => {
   it("Car ties", () => {
-    cy.login("007", "1234");
+    cy.login("test ส่วนลด", "1234");
     addCartiees();
     addCartiees1();
     addconfimeCartiees();
